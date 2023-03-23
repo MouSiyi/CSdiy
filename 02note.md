@@ -93,16 +93,17 @@ A local frame, followed by the global frame
 **pure functions**:Functions have some input and return some ouput    
 **non-pure functions** make some change to the state of the interpreter or computer
 
-## operators
+## Operators
 mathematical operators provide a method of *combination*    
 each have their own evaluation procedures;can be thought of as short-hand for call expressions    
 e.g 5//4 == floordiv(5,4)
 
-## debugging
+## Debugging
 incremental testing;modular design;precise assumption;
 teamwork
 
 
+``````````
 哇塞 好酷
 吗的 发现太晚了
 太好笑了
