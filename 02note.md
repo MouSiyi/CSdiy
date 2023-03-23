@@ -89,15 +89,6 @@ A local frame, followed by the global frame
 
 **A name evaluates to the value bound to that name in the earliest frame of the current environment in which that name is found**
 
-## The Non-Pure Function
-**pure functions**:Functions have some input and return some ouput    
-**non-pure functions** make some change to the state of the interpreter or computer
-
-## Operators
-mathematical operators provide a method of *combination*    
-each have their own evaluation procedures;can be thought of as short-hand for call expressions    
-e.g 5//4 == floordiv(5,4)
-
 ## Debugging
 incremental testing;modular design;precise assumption;
 teamwork
