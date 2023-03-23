@@ -56,7 +56,8 @@ x,y=y,x
 **abstraction**: give sth complex a name, treat it as a whole    
 Assignment is a simple means of *abstraction*: binds names to values    
 **Functions** encapsulate logic that manipulates data
-Function definition is a more powerful means of *abstraction*:binds name to expressions   
+Function definition is a more powerful means of *abstraction*:binds name to expressions
+**aspects of a function abstraction**:domain,range,intent   
 
 
 ```python
@@ -92,9 +93,15 @@ A local frame, followed by the global frame
 **pure functions**:Functions have some input and return some ouput    
 **non-pure functions** make some change to the state of the interpreter or computer
 
+## operators
+mathematical operators provide a method of *combination*    
+each have their own evaluation procedures;can be thought of as short-hand for call expressions    
+e.g 5//4 == floordiv(5,4)
+
 ## debugging
 incremental testing;modular design;precise assumption;
 teamwork
+
 
 哇塞 好酷
 吗的 发现太晚了
