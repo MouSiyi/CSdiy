@@ -53,3 +53,33 @@ The parameter having a default parameter has to be placed after other parameters
 
 ## Conditional Statements
 A *statement* is executed by the interpreter to perform an action
+*Compound statement*(spend more than one line):
+```python
+#the whole thing is a statement
+<header>#determines a statement's type; "controls" the suite that follows
+    <statement>
+    <statement>
+    ...
+    #suite of the clause; to execute its sequence of statements in order
+#a clause
+<separating header>
+    <statement>
+    <statement>
+    ...
+
+```
+Execution rule for conditional statements:    
+Each clause is considered in order.    
+1. Evaluate the header's expression.
+2. If it is a true value, execute the suite and skip the remaining clauses.    
+Syntax: if; elif; else    
+
+False values: False, 0, '', None...
+True values: anything else
+
+## Iteration
+**while statement**     
+Execution rule:    
+1. Evaluate the header's expression.
+2. If it is a true value, execute the whole suite, then return to step 1.
+
