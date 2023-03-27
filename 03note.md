@@ -35,6 +35,7 @@ from operator import floordiv, mod
 **doctest**
 ```python
 def divide_exact(n,d):
+    #remember to intent
     """Return the quotient and remainder of div of n,d
 
     >>> q, r =divide_exact(2013,10)
@@ -45,12 +46,18 @@ def divide_exact(n,d):
     """
     return n//d,n%d
 quotient, remainder = divide_exact(2022,10)
-#using python3 -m doctest -v [filename].py to implement a doctest
+#use python3 -m doctest -v [filename].py to implement a doctest
+#use help(funcname) to see its docstring
 ```
 
 **default argument**    
 The parameter having a default parameter has to be placed after other parameters.
 
+# Control
+Control statements are ones that control the flow of a program's execution based on the results of logical comparisons.
+## Statements
+Statements are executed.    
+Statements govern the relationship among expressions in a program and what happens to their results.
 ## Conditional Statements
 A *statement* is executed by the interpreter to perform an action
 *Compound statement*(spend more than one line):
@@ -68,14 +75,43 @@ A *statement* is executed by the interpreter to perform an action
     ...
 
 ```
-Execution rule for conditional statements:    
+1. Expressions, return statements, and assign statements are simple statements.
+2. A def statement is a compound statement.The suite following the header defines the function body.      
+
+
+Each kind of header correspond to specialized evaluation rules for executing its suite, and that's called *control*.      
+To execute a sequence of statements, execute the first statement. If that statement does not *redirect control*, then proceed to execute the resr of the sequence of statements,if any remain.      
+an example of redirecting control : the process of function application terminates whenever the first return statement is executed
+
+
+**Execution rule for conditional statements:**
 Each clause is considered in order.    
 1. Evaluate the header's expression.
-2. If it is a true value, execute the suite and skip the remaining clauses.    
+2. If it is a true value, execute the suite and skip the remaining clauses.     
+
 Syntax: if; elif; else    
 
+**Boolean context:**     
+Their truth values matter to control flow.
 False values: False, 0, '', None...
 True values: anything else
+Every built-in kind of data in Python has both true and false values.    
+**Boolean values:**     
+Boolean values represent truth values in logical expressions.    
+The built-in comparison operations return Boolean values.
+**Boolean operators:**      
+not;and;or       
+**Evaluation procedure for expression <left>and<right>**
+1. Evaluate the subexpression <left>.
+2. If the result is a false value v, then the expression evaluates to v.
+3. Othervise, the expression evaluates to the value of <right>.     
+
+The values, operators, rules provide a way of *combination*.      
+Functions that perform comparisons and return boolean values typically begin with ```is```.
+  
+
+
+
 
 ## Iteration
 **while statement**     
