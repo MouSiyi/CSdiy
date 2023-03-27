@@ -73,6 +73,11 @@ Function body: defines the computational process
 2. Set the body of that func to be everything indented after the first line(not executed until the function is called;scrolls away the body of the func)
 3. Bind *<name>* to that func in the *current* frame
 
+**the qualities of good functions**      
+1. Each function should have exactly *one* job.
+2. Don't repeat yourself.For reused code, pack it into a function.
+3. Defined generally.
+
 **calling user-defined functions procedure**
 1. Add a *local* frame, forming a *new* environment
 2. Bind the formal parameters to the argument values
