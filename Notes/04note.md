@@ -85,5 +85,49 @@ def summation(n,term):
 ``` 
 A higher-order function: a function that takes annother function as an argument.
 
+## Functions as General Methods
+**golden ratio** :       
+a / b = ( a + b )/a   (a>b)
+phi = 1 + 1/phi       
+We use its recursive form     
+```python
+from math import sqrt
+def improve(update, close, guess=1):
+    while not (close(guess)):
+        guess = update(guess)
+    return guess
+def golden_update(guess):
+    guess = 1 + 1/guess
+    return guess
+def square_close_to_successor(guess):
+    return approx_eq(guess * guess, guess + 1)
+def approx_eq(x, y, tolerance=1e-15):
+    return abs(x - y) < tolerance
+improve(golden_update, square_close_to_successor)
+
+phi = 1/2 + sqrt(5)/2
+def improve_test():
+    approx_phi = improve(golden_update, square_close_to_successor)
+    assert approx_eq(phi, approx_phi), "bad approximimprove_test()"
+```
 ## Functions as Return Values
 Functions defined within other function bodies are bound to names in a local frame
+```python
+def make_adder(n):
+    """Return a function that takes one argument K and return K + n
+    """
+    def adder(k):
+        return  k + n
+    return adder
+make_adder(1)(2)
+```
+
+
+
+## The Purpose of Higher-Order Functions
+Functions are first-class: Functions can be manipulated as values in our programming language.      
+Higher-order function: A function that takes a function as an argument value or returns a function as a return value      
+They are useful because:      
+Express general methods of computation.      
+Remove repetition.       
+Separate concerns among functions(1-1 job)       
