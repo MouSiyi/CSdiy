@@ -339,11 +339,17 @@ def time_per_word(words, times_per_player):
         for i in range(time_points):
             time[i] = time[i+1] - time[i]
         time.pop()
-        
+    
+
 
     return match(words, times_per_player)
     # END PROBLEM 9
-
+    # Method 2
+#    diff = []
+#    time_points = len(words)
+#    for time in times_per_player:
+#        diff.append([time[i] - time[i-1] for i in range(1, time_points)])
+#    return match(words, diff)
 
 def fastest_words(match):
     """Return a list of lists of which words each player typed fastest.
